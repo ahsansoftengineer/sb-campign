@@ -61,55 +61,33 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
         renderExpandedMenuItemIcon={{ icon: <i className='ri-circle-line' /> }}
         menuSectionStyles={menuSectionStyles(theme)}
       >
-        <SubMenu
+        <MenuItem href={`/`} icon={<i className='ri-home-smile-line' />}>
+          Dashboard
+        </MenuItem>
+        {/* <SubMenu
           label='Dashboards'
           icon={<i className='ri-home-smile-line' />}
           suffix={<Chip label='5' size='small' color='error' />}
-        ></SubMenu>
-        <SubMenu
-          label='Front Pages'
-          icon={<i className='ri-file-copy-line' />}
-          suffix={<Chip label='Pro' size='small' color='primary' variant='tonal' />}
-        ></SubMenu>
+        ></SubMenu> */}
+
         <MenuSection label='Apps & Pages'>
           <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
             Account Settings
           </MenuItem>
           <SubMenu label='Auth Pages' icon={<i className='ri-shield-keyhole-line' />}>
-            <MenuItem href='/login' target='_blank'>
-              Login
-            </MenuItem>
-            <MenuItem href='/register' target='_blank'>
-              Register
-            </MenuItem>
-            <MenuItem href='/forgot-password' target='_blank'>
-              Forgot Password
-            </MenuItem>
+            <MenuItem href='/login'>Login</MenuItem>
+            <MenuItem href='/register'>Register</MenuItem>
+            <MenuItem href='/forgot-password'>Forgot Password</MenuItem>
           </SubMenu>
           <SubMenu label='Miscellaneous' icon={<i className='ri-question-line' />}>
-            <MenuItem href='/error' target='_blank'>
-              Error
-            </MenuItem>
-            <MenuItem href='/under-maintenance' target='_blank'>
-              Under Maintenance
-            </MenuItem>
+            <MenuItem href='/error'>Error</MenuItem>
+            <MenuItem href='/under-maintenance'>Under Maintenance</MenuItem>
           </SubMenu>
           <MenuItem href='/card-basic' icon={<i className='ri-bar-chart-box-line' />}>
             Cards
           </MenuItem>
         </MenuSection>
-        <MenuSection label='Forms & Tables'>
-          <MenuItem href='/form-layouts' icon={<i className='ri-layout-4-line' />}>
-            Form Layouts
-          </MenuItem>
-          <MenuItem
-            href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/form-elements`}
-            icon={<i className='ri-radio-button-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
-          >
-            Form Elements
-          </MenuItem>
+        <MenuSection label='Misc'>
           <MenuItem
             href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/mui-table`}
             icon={<i className='ri-table-2' />}
@@ -118,57 +96,8 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
           >
             MUI Tables
           </MenuItem>
-        </MenuSection>
-        <MenuSection label='Misc'>
-          <MenuItem
-            href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/foundation`}
-            icon={<i className='ri-pantone-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
-          >
-            Foundation
-          </MenuItem>
-          <MenuItem
-            href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/components`}
-            icon={<i className='ri-toggle-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
-          >
-            Components
-          </MenuItem>
-          <MenuItem
-            href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/menu-examples/overview`}
-            icon={<i className='ri-menu-search-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
-          >
-            Menu Examples
-          </MenuItem>
-          <MenuItem
-            href={`https://github.com/themeselection/${process.env.NEXT_PUBLIC_REPO_NAME}/issues`}
-            icon={<i className='ri-lifebuoy-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
-          >
-            Raise Support
-          </MenuItem>
-          <MenuItem
-            href={process.env.NEXT_PUBLIC_DOCS_URL}
-            icon={<i className='ri-book-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
-          >
-            Documentation
-          </MenuItem>
           <SubMenu label='Others' icon={<i className='ri-more-line' />}>
             <MenuItem suffix={<Chip label='New' size='small' color='info' />}>Item With Badge</MenuItem>
-            <MenuItem
-              href='https://themeselection.com'
-              target='_blank'
-              suffix={<i className='ri-external-link-line text-xl' />}
-            >
-              External Link
-            </MenuItem>
             <SubMenu label='Menu Levels'>
               <MenuItem>Menu Level 2</MenuItem>
               <SubMenu label='Menu Level 2'>

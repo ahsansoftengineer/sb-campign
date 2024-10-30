@@ -1,0 +1,27 @@
+BASEPATH=
+NEXT_PUBLIC_APP_URL=http://localhost:3000${BASEPATH}
+NEXT_PUBLIC_DOCS_URL=https://demos.themeselection.com/materio-mui-nextjs-admin-template/documentation
+NEXT_PUBLIC_PRO_URL=https://demos.themeselection.com/materio-mui-nextjs-admin-template/demo-1
+NEXT_PUBLIC_REPO_NAME=sb-campign
+
+FACEBOOK_CLIENT_ID=your_facebook_app_id
+FACEBOOK_CLIENT_SECRET=your_facebook_app_secret
+NEXTAUTH_URL=http://localhost:3000
+
+AUTH_SECRET= # `npx auth secret` or `openssl rand -hex 32`
+
+AUTH_AUTH0_ID=
+AUTH_AUTH0_SECRET=
+AUTH_AUTH0_ISSUER=
+
+AUTH_FACEBOOK_ID=
+AUTH_FACEBOOK_SECRET=
+
+AUTH_GITHUB_ID=
+AUTH_GITHUB_SECRET=
+
+AUTH_GOOGLE_ID=
+AUTH_GOOGLE_SECRET=
+
+AUTH_TWITTER_ID=
+AUTH_TWITTER_SECRET=
