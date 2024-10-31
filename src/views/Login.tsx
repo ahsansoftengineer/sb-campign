@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import type { FormEvent } from 'react'
 
 // Next Imports
@@ -104,6 +104,34 @@ const Login = ({ mode }: { mode: Mode }) => {
               </div>
               <Divider className='gap-3'>or</Divider>
               <div className='flex justify-center items-center gap-2'>
+                <Link
+                  href={{
+                    pathname: 'https://www.facebook.com/v16.0/dialog/oauth',
+                    query: {
+                      response_type: 'code',
+                      client_id: '625178299538233',
+                      redirect_uri: 'http://localhost:3000/login',
+                      scope:
+                        'ads_management,ads_read,business_management,pages_read_engagement,pages_manage_ads,pages_manage_posts,pages_manage_metadata,public_profile,email'
+                    }
+                  }}
+                >
+                  Facebook Manager
+                </Link>
+                <Link
+                  href={{
+                    pathname: 'https://www.facebook.com/v16.0/dialog/oauth',
+                    query: {
+                      client_id: '625178299538233',
+                      redirect_uri: 'http://localhost:3000/login',
+                      response_type: 'code',
+                      scope:
+                        'ads_management,ads_read,business_management,pages_read_engagement,pages_manage_ads,pages_manage_posts,public_profile,email'
+                    }
+                  }}
+                >
+                  Facebook Client
+                </Link>
                 <IconButton size='small' className='text-facebook'>
                   <i className='ri-facebook-fill' />
                 </IconButton>
