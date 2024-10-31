@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 
 // Next Imports
@@ -95,6 +95,7 @@ const Login = ({ mode }: { mode: Mode }) => {
               <Button fullWidth variant='contained' type='submit'>
                 Log In
               </Button>
+
               <div className='flex justify-center items-center flex-wrap gap-2'>
                 <Typography>New on our platform?</Typography>
                 <Typography component={Link} href='/register' color='primary'>
