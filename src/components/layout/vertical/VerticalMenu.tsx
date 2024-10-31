@@ -71,9 +71,9 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
         ></SubMenu> */}
 
         <MenuSection label='Apps & Pages'>
-          <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
+          {/* <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
             Account Settings
-          </MenuItem>
+          </MenuItem> */}
           <SubMenu label='Auth Pages' icon={<i className='ri-shield-keyhole-line' />}>
             <MenuItem href='/login'>Login</MenuItem>
             <MenuItem href='/register'>Register</MenuItem>
